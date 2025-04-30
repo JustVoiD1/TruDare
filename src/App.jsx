@@ -31,9 +31,9 @@ const App = () => {
             value={rating}
             onChange={(e) => setRating(e.target.value)}
           >
-            <option className="text-black" value="PG">PG (Kids)</option>
-            <option className="text-black" value="PG13">PG-13 (Teens)</option>
-            <option className="text-black" value="R">R (Adults)</option>
+            <option className="text-black" value="pg">PG (Kids)</option>
+            <option className="text-black" value="pg13">PG-13 (Teens)</option>
+            <option className="text-black" value="r">R (Adults)</option>
           </select>
         </div>
 
