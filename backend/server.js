@@ -6,7 +6,13 @@ import cors from "cors"
 
 const app = express();
 app.use(cors({
-  origin: [`http://localhost:5173/`, `https://tru-dare-truthordare.vercel.app/`, `https://tru-dare-truthordare-git-master-mainaks-projects-ed66132a.vercel.app/`, `https://tru-dare-truthordare-8j59jg06p-mainaks-projects-ed66132a.vercel.app/`, ``]
+  origin: [
+    "http://localhost:5173",
+    "https://tru-dare-truthordare.vercel.app",
+    "https://tru-dare-truthordare-git-master-mainaks-projects-ed66132a.vercel.app",
+    "https://tru-dare-truthordare-8j59jg06p-mainaks-projects-ed66132a.vercel.app",
+    "https://trudare-production.up.railway.app"
+  ]
 }));
 
 const PORT = process.env.PORT || 3000;
