@@ -1,1 +1,3 @@
-# Truth OR Dare
+# TruDare
+
+- a simple but fun truth or dare application
