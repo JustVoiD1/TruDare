@@ -7,7 +7,7 @@ const App = () => {
 
   const fetchQuestion = async (type) => {
     setType(type);
-    const res = await fetch(`http://localhost:3000/api/${type}?rating=${rating}`);
+    const res = await fetch(`trudare-production.up.railway.app/api/${type}?rating=${rating}`);
     const data = await res.json();
     setQuestion(data.question);
   };
