@@ -2,8 +2,12 @@
 import express from "express";
 import axios from "axios";
 import cors from "cors"
+
+
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: `https://tru-dare-truthordare-git-master-mainaks-projects-ed66132a.vercel.app/`
+}));
 
 const PORT = process.env.PORT || 3000;
 
