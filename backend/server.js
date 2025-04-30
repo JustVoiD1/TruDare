@@ -5,7 +5,7 @@ import cors from "cors"
 const app = express();
 app.use(cors());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const geturl = (type, rating) =>`https://api.truthordarebot.xyz/v1/${type}?rating=${rating}`;
 
