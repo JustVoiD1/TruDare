@@ -1,14 +1,20 @@
 import { useState } from "react";
-import {motion} from "motion/react"
+// import {motion} from "motion/react"
 const App = () => {
+
+
+  // eslint-disable-next-line no-unused-vars
   const [type, setType] = useState(""); // 'truth' or 'dare'
   const [question, setQuestion] = useState("");
   const [rating, setRating] = useState("pg"); // default: 'pg'
 
-  const fetchQuestion = async (type) => {
+  const fetchQuestion = async (type, rating) => {
     setType(type);
-    const res = await fetch(`http://localhost:3000/api/${type}?rating=${rating}`);
+    setRating(rating);
+    const res = await fetch(`https://api.truthordarebot.xyz/v1/${type}?rating=${rating}`);
+    
     const data = await res.json();
+    // console.log(data);
     setQuestion(data.question);
   };
 
@@ -45,13 +51,13 @@ const App = () => {
 
         <div className="fixed bottom-[20vh] flex gap-4 mb-6 mt-20">
         <button
-  onClick={() => fetchQuestion("truth")}
+  onClick={() => fetchQuestion("truth", rating)}
   className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 px-8 py-5 text-lg font-semibold text-white rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105"
 >
   Truth
 </button>
 <button
-  onClick={() => fetchQuestion("dare")}
+  onClick={() => fetchQuestion("dare", rating)}
   className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 px-8 py-5 text-lg font-semibold text-white rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105"
 >
   Dare
