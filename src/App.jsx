@@ -44,7 +44,7 @@ const App = () => {
         </div>
 
         {question && (
-          <div className="mt-[20vh] bg-gradient-to-br from-purple-600 to-blue-600 text-white p-6 rounded-2xl shadow-2xl max-w-lg text-center border-4 border-white/20 backdrop-blur-md">
+          <div className="my-auto bg-gradient-to-br from-purple-600 to-blue-600 text-white p-6 rounded-2xl shadow-2xl max-w-lg text-center border-4 border-white/20 backdrop-blur-md">
             <p className="text-xl font-bold drop-shadow-md">{question}</p>
           </div>
         )}
