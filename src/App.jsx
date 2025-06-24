@@ -49,7 +49,7 @@ const App = () => {
           </div>
         )}
 
-        <div className="sticky bottom-[20vh] flex gap-4 mb-6 mt-20">
+        <div className="fixed bottom-[8vh] flex gap-4 mb-6 mt-20">
           <button
             onClick={() => fetchQuestion("truth", rating)}
             className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 px-8 py-5 text-lg font-semibold text-white rounded-full shadow-lg transform transition-transform duration-200 hover:scale-105"
